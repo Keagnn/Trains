@@ -42,7 +42,7 @@ $(document).ready(function () {
     var freq = $(".freq").val().trim();
 
     var minutes = moment.duration(currentTime).subtract(time);
-    var msAway = (minutes * -1);
+    var msAway = Math.abs(minutes);
     var mins = moment.duration(msAway).asMinutes();
 
     console.log(name);

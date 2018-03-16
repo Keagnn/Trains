@@ -15,6 +15,13 @@ $(document).ready(function () {
 
   //  var database = firebase.database();
 
+  var timeArr = [];
+
+  
+
+  
+
+
 
   $(".submit").on("click", function () {
     var name = $(".name").val().trim();
@@ -25,6 +32,8 @@ $(document).ready(function () {
     console.log(dest);
     console.log(time);
     console.log(freq);
+    
+
 
     // database.ref().push({
     //     name: name,
@@ -45,7 +54,17 @@ $(document).ready(function () {
     var msAway = (minutes * -1);
     var mins = moment.duration(msAway).asMinutes();
     
+
+
+
+    timeArr.push(mins);
+  
+    var min = Math.min.apply(Math, timeArr);
+    console.log(min);
+    $('.float').html(" <marquee>The next train will arrive in " + min + " Minutes! </marquee>");
     
+
+
 
     console.log("minutes away:" + mins);
 

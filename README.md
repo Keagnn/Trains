@@ -8,4 +8,5 @@
 
 - This application uses Firebase to store all of the train data into one organized database. 
 - all trains you may see are created by anyone who visits the site.
+- Moment Js is also used to format the time
 [Try it out!]( https://akotu.github.io/Trains/)

@@ -1,7 +1,7 @@
 # Train Manager
 
 - Act as a manager to add, or delete trains that are approaching the station.
-- Add the train name, destination, time to arrive, and the time it takes to arrive to let everyone know which train they need to get on!
+- Add the train name, destination, journey length, and it automatically calculates time until it reaches the station!
 
 
 ## Functionality   

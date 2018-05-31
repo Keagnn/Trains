@@ -16,13 +16,7 @@ $(document).ready(function () {
       };
       firebase.initializeApp(config);
 
-      const obj = firebase.database().ref().child('object');
       
-
-      
-        function deleteFire(x){
-          var snapKey = x.key
-        }
     
 
       var database = firebase.database();
@@ -36,10 +30,10 @@ $(document).ready(function () {
 
       database.ref().on("child_added", function (snapshot) {
 
-      
+        //each train has a specified "key" this targets that "key"
         var snapKey = snapshot.key
 
-
+        //Log out all of the values from firebase
         console.log("snapshot: ", snapshot);
         console.log(snapshot.key);
         console.log(snapshot.val());
@@ -50,7 +44,7 @@ $(document).ready(function () {
         console.log(snapshot.val().mins);
 
         
-
+        //change each v
         name = snapshot.val().name;
         dest = snapshot.val().dest;
         time = snapshot.val().time;
